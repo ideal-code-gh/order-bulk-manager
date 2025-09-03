@@ -1,0 +1,18 @@
+massInvoice:
+  function: invoice.js
+  web: 'yes'
+  runtime: 'nodejs:18'
+  inputs:
+    LOG_LEVEL: debug
+  annotations:
+    require-adobe-auth: true
+    final: true
+massShip:
+  function: ship.js
+  web: 'yes'
+  runtime: 'nodejs:18'
+  inputs:
+    LOG_LEVEL: debug
+  annotations:
+    require-adobe-auth: true
+    final: true
