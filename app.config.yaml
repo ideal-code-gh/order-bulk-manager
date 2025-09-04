@@ -9,4 +9,5 @@ application:
       order-manager-app:
         license: Apache-2.0
         actions:
-          $include: actions/massActions/ext.config.yaml
+          massAction:
+            $include: actions/massAction/ext.config.yaml
