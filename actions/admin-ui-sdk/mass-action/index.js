@@ -1,6 +1,6 @@
 const { validateData } = require('./validator')
 const { sendData } = require('./sender')
-const { HTTP_OK, HTTP_INTERNAL_ERROR } = require('../constants')
+const { HTTP_OK, HTTP_INTERNAL_ERROR } = require('../../constants')
 
 async function main(params) {
   try {

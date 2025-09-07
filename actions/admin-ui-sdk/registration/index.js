@@ -1,4 +1,4 @@
-const { HTTP_OK } = require('../constants')
+const { HTTP_OK } = require('../../constants')
 
 async function main() {
   const extensionId = 'order-manager-app'
@@ -17,7 +17,7 @@ async function main() {
                 message: 'Are you sure you want to proceed with invoicing on selected orders?'
               },
               displayIframe: false,
-              path: `api/v1/web/${extensionId}/massAction`
+              path: 'api/v1/web/admin-ui-sdk/mass-action'
             },
             {
               actionId: `${extensionId}::mass-ship`,
@@ -27,7 +27,7 @@ async function main() {
                 message: 'Are you sure you want to proceed with shipping on selected orders?'
               },
               displayIframe: false,
-              path: `api/v1/web/${extensionId}/massAction`
+              path: 'api/v1/web/admin-ui-sdk/mass-action'
             }
           ]
         },

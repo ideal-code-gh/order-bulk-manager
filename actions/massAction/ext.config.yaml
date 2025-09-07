@@ -1,9 +1,0 @@
-function: index.js
-web: 'yes'
-runtime: 'nodejs:18'
-inputs:
-  LOG_LEVEL: debug
-  BACKOFFICE_BASE_URL: $BACKOFFICE_BASE_URL
-annotations:
-  require-adobe-auth: true
-  final: true

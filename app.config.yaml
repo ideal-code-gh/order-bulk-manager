@@ -4,10 +4,4 @@ application:
       admin-ui-sdk:
         license: Apache-2.0
         actions:
-          registration:
-            $include: actions/registration/ext.config.yaml
-      order-manager-app:
-        license: Apache-2.0
-        actions:
-          massAction:
-            $include: actions/massAction/ext.config.yaml
+          $include: actions/admin-ui-sdk/actions.config.yaml
