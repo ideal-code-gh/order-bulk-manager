@@ -1,0 +1,12 @@
+orders:
+  function: orders/index.js
+  web: yes
+  runtime: nodejs:20
+  inputs:
+    LOG_LEVEL: debug
+run-action:
+  function: run-action/index.js
+  web: yes
+  runtime: nodejs:20
+  inputs:
+    LOG_LEVEL: debug

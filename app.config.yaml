@@ -5,3 +5,7 @@ application:
         license: Apache-2.0
         actions:
           $include: actions/admin-ui-sdk/actions.config.yaml
+      commerce:
+        license: Apache-2.0
+        actions:
+          $include: actions/commerce/actions.config.yaml
