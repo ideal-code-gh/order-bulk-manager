@@ -1,11 +1,9 @@
-const { HTTP_OK } = require('../../constants')
+const { HTTP_OK } = require('/lib/constants')
 
-async function main() {
+exports.main = async function main() {
   return {
     statusCode: HTTP_OK,
     body: {
     }
   }
 }
-
-exports.main = main

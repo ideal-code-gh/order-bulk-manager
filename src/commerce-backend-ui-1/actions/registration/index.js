@@ -1,7 +1,7 @@
-const { HTTP_OK } = require('../../constants')
+const { HTTP_OK } = require('/lib/constants')
 
-async function main() {
-  const extensionId = 'order-manager-app'
+exports.main = async function main() {
+  const extensionId = 'order-mass-actions-app'
 
   return {
     statusCode: HTTP_OK,
@@ -49,5 +49,3 @@ async function main() {
     }
   }
 }
-
-exports.main = main

@@ -1,8 +1,8 @@
 const { validateData } = require('./validator')
 const { sendData } = require('./sender')
-const { HTTP_OK, HTTP_INTERNAL_ERROR } = require('../../constants')
+const { HTTP_OK, HTTP_INTERNAL_ERROR } = require('/lib/constants')
 
-async function main(params) {
+exports.main = async function main(params) {
   try {
     validateData(params)
     sendData(params)
@@ -19,5 +19,3 @@ async function main(params) {
     statusCode: HTTP_OK
   }
 }
-
-exports.main = main

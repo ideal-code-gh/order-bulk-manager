@@ -1,0 +1,26 @@
+operations:
+  view:
+    - type: web
+      impl: index.html
+runtimeManifest:
+  packages:
+    admin-ui-sdk:
+      license: Apache-2.0
+      actions:
+        registration:
+          function: actions/registration/index.js
+          web: yes
+          runtime: nodejs:20
+          inputs:
+            LOG_LEVEL: debug
+          annotations:
+            require-adobe-auth: true
+        mass-action:
+          function: actions/mass-action/index.js
+          web: yes
+          runtime: nodejs:20
+          inputs:
+            BACKOFFICE_BASE_URL: $BACKOFFICE_BASE_URL
+            LOG_LEVEL: debug
+          annotations:
+            require-adobe-auth: true

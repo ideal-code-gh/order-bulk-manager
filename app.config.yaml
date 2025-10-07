@@ -1,10 +1,10 @@
+extensions:
+  commerce/backend-ui/1:
+    $include: src/commerce-backend-ui-1/ext.config.yaml
+
 application:
   runtimeManifest:
     packages:
-      admin-ui-sdk:
-        license: Apache-2.0
-        actions:
-          $include: actions/admin-ui-sdk/actions.config.yaml
       commerce:
         license: Apache-2.0
         actions:
