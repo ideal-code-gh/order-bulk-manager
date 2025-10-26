@@ -1,15 +1,10 @@
-async function sendData(params) {
-  const response = await fetch(`${params.BACKOFFICE_BASE_URL}api/action`, {
-    method: 'POST',
-    body: JSON.stringify({
-      action: params.massActionId,
-      orderIds: params.selectedIds
-    })
-  })
+const { post } = require('/lib/backend')
 
-  if (!response.ok) {
-    throw new Error(response.json().message)
-  }
+async function sendData(params) {
+  await post(params, '/api/order-queue', {
+    action: params.massActionId,
+    orderIds: params.selectedIds
+  })
 }
 
 module.exports = {

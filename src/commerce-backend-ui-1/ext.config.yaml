@@ -20,7 +20,8 @@ runtimeManifest:
           web: yes
           runtime: nodejs:20
           inputs:
-            BACKOFFICE_BASE_URL: $BACKOFFICE_BASE_URL
+            BACKEND_BASE_URL: $BACKEND_BASE_URL
+            BACKEND_ACCESS_TOKEN: $BACKEND_ACCESS_TOKEN
             LOG_LEVEL: debug
           annotations:
             require-adobe-auth: true
