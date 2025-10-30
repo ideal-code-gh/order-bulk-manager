@@ -1,8 +1,8 @@
 {
-  "name": "order-mass-actions-app",
+  "name": "order-bulk-manager",
   "displayName": "Enhanced mass actions for Adobe Commerce SaaS order grid",
   "description": "",
   "platform": "web",
-  "id": "order-mass-actions-app",
+  "id": "order-bulk-manager",
   "version": "1.0.0"
 }

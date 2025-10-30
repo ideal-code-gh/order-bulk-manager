@@ -1,4 +1,4 @@
-const { post } = require('../../lib/backend')
+const { tenantRegister } = require('../../lib/backend')
 const chalk = require('chalk')
 const fs = require('fs')
 const envPath = '.env'
@@ -6,7 +6,7 @@ const envPath = '.env'
 require('dotenv').config({quiet: true})
 
 exports.main = async function main() {
-  const response = await post(process.env, '/api/register', {
+  const response = await tenantRegister(process.env, {
     runtime: process.env.AIO_runtime_namespace
   })
 

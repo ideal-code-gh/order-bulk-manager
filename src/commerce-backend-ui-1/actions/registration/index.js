@@ -1,7 +1,7 @@
 const { HTTP_OK } = require('/lib/constants')
 
 exports.main = async function main() {
-  const extensionId = 'order-mass-actions-app'
+  const extensionId = 'order-bulk-manager'
 
   return {
     statusCode: HTTP_OK,
@@ -10,7 +10,7 @@ exports.main = async function main() {
         order: {
           massActions: [
             {
-              actionId: `${extensionId}::mass-invoice`,
+              actionId: `${extensionId}::invoice`,
               label: 'Invoice',
               confirm: {
                 title: 'Invoice',
@@ -20,7 +20,7 @@ exports.main = async function main() {
               path: 'api/v1/web/admin-ui-sdk/mass-action'
             },
             {
-              actionId: `${extensionId}::mass-ship`,
+              actionId: `${extensionId}::ship`,
               label: 'Ship',
               confirm: {
                 title: 'Ship',
@@ -35,11 +35,11 @@ exports.main = async function main() {
           massActions: {
             order: [
               {
-                actionId: `${extensionId}::mass-invoice`,
+                actionId: `${extensionId}::invoice`,
                 successMessage: 'The orders have been queued for invoicing.'
               },
               {
-                actionId: `${extensionId}::mass-ship`,
+                actionId: `${extensionId}::ship`,
                 successMessage: 'The orders have been queued for shipping.'
               }
             ]

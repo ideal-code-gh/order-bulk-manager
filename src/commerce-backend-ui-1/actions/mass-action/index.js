@@ -1,11 +1,12 @@
-const { validateData } = require('./validator')
-const { sendData } = require('./sender')
+const { publishToQueue } = require('/lib/backend')
 const { HTTP_OK, HTTP_INTERNAL_ERROR } = require('/lib/constants')
 
 exports.main = async function main(params) {
   try {
-    validateData(params)
-    sendData(params)
+    await publishToQueue(params, {
+      operation: params.massActionId.split('::')[1],
+      order_ids: params.selectedIds || []
+    })
   } catch (err) {
     return {
       statusCode: HTTP_INTERNAL_ERROR,
