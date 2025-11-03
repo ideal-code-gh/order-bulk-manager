@@ -1,9 +1,5 @@
-const { HTTP_OK } = require('/lib/constants')
+const { wrapper } = require('/lib/action-wrapper')
 
-exports.main = async function main() {
-  return {
-    statusCode: HTTP_OK,
-    body: {
-    }
-  }
-}
+exports.main = () => wrapper(async () => {
+  // run the action
+})

@@ -13,7 +13,7 @@ exports.main = async function main() {
   const envContent = fs.readFileSync(envPath, 'utf8')
   fs.writeFileSync(envPath, envContent.replace(
     /BACKEND_ACCESS_TOKEN=.*/,
-    `BACKEND_ACCESS_TOKEN=${response.data.token}`
+    `BACKEND_ACCESS_TOKEN=${response.token}`
   ))
 
   console.log(
