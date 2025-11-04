@@ -1,7 +1,10 @@
-import React from 'react'
+import { defaultTheme, Provider } from '@adobe/react-spectrum'
+import Grid from './Grid/Grid'
 
 export default () => {
   return (
-      <div>Hello World</div>
+    <Provider theme={defaultTheme}>
+      <Grid />
+    </Provider>
   )
 }

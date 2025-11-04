@@ -5,6 +5,7 @@
   "dependencies": {
     "@adobe/aio-lib-ims": "^7.0.2",
     "@adobe/aio-sdk": "^6",
+    "@adobe/react-spectrum": "^3.45.0",
     "@adobe/uix-guest": "^1.0.5",
     "axios": "^1.12.2",
     "chalk": "^4.1.2",
