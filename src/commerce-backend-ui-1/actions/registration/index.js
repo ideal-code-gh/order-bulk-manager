@@ -1,7 +1,7 @@
 const { wrapper } = require('/lib/action-wrapper')
 
 exports.main = () => wrapper(() => {
-  const extensionId = 'order-bulk-manager'
+  const extensionId = 'order_bulk_manager'
 
   return {
     registration: {
@@ -42,6 +42,22 @@ exports.main = () => wrapper(() => {
             }
           ]
         }
+      },
+      menuItems: [
+        {
+          id: `${extensionId}::order_bulk_manager`,
+          title: 'Order Bulk Manager',
+          parent: 'Magento_Sales::sales',
+          isSection: true
+        },
+        {
+          id: `${extensionId}::order_action_queue`,
+          title: 'Order Action Queue',
+          parent: `${extensionId}::order_bulk_manager`
+        }
+      ],
+      page: {
+        title: 'Order Action Queue'
       }
     }
   }
