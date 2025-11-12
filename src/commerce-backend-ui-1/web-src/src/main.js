@@ -1,7 +1,8 @@
 import { register } from '@adobe/uix-guest'
+import _ from 'lodash'
 
 const extensionId = 'order-bulk-manager'
-const frontBaseURL = process.env.FRONTEND_BASE_URL
+const frontBaseURL = _.trimEnd(process.env.FRONTEND_BASE_URL, '/')
 
 register({
   id: extensionId
