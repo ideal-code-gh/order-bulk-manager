@@ -5,13 +5,13 @@ exports.main = (params) => wrapper(async () => {
   switch (params.operation) {
     case 'invoice':
       await invoiceOrder(params, {
-        order_id: params.order_id
+        order_id: params.order_id,
       })
       break
 
     case 'ship':
       await shipOrder(params, {
-        order_id: params.order_id
+        order_id: params.order_id,
       })
       break
 
