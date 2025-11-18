@@ -1,7 +1,8 @@
 {
-  "name": "order-bulk-manager",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@ideal-code/order-bulk-manager",
+  "version": "1.0.1",
+  "description": "Enhanced mass actions for Adobe Commerce SaaS order grid",
+  "license": "MIT",
   "dependencies": {
     "@adobe/aio-lib-ims": "^7.0.2",
     "@adobe/aio-sdk": "^6",
