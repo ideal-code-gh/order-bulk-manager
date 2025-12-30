@@ -1,6 +1,6 @@
-const { wrapper } = require('/lib/action-wrapper')
+import wrapper from '/lib/action-wrapper'
 
-exports.main = () => wrapper(() => {
+export const main = () => wrapper(() => {
   const extensionId = 'order_bulk_manager'
 
   return {

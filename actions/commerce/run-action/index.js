@@ -1,16 +1,16 @@
-const { wrapper } = require('/lib/action-wrapper')
-const { invoiceOrder, shipOrder } = require('/lib/commerce')
+import commerce from '/lib/commerce'
+import wrapper from '/lib/action-wrapper'
 
-exports.main = (params) => wrapper(async () => {
+export const main = (params) => wrapper(async () => {
   switch (params.operation) {
     case 'invoice':
-      await invoiceOrder(params, {
+      await commerce.invoiceOrder(params, {
         order_id: params.order_id,
       })
       break
 
     case 'ship':
-      await shipOrder(params, {
+      await commerce.shipOrder(params, {
         order_id: params.order_id,
       })
       break
