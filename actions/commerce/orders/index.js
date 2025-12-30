@@ -12,5 +12,8 @@ export const main = (params) => wrapper(async () => {
     request['searchCriteria[filterGroups][0][filters][0][condition_type]'] = 'in'
   }
 
-  return await commerce.fetchOrders(params, request)
+  return await commerce.getOrders(
+    commerce.getClient(params),
+    request,
+  )
 })

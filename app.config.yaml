@@ -6,6 +6,4 @@ application:
   runtimeManifest:
     packages:
       commerce:
-        license: Apache-2.0
-        actions:
-          $include: actions/commerce/actions.config.yaml
+        $include: actions/commerce/actions.config.yaml

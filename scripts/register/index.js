@@ -6,9 +6,12 @@ import fs from 'fs'
 dotenv.config({quiet: true})
 const envPath = '.env'
 
-const response = await backend.tenantRegister(process.env, {
-  runtime: process.env.AIO_runtime_namespace,
-})
+const response = await backend.tenantRegister(
+  backend.getClient(process.env),
+  {
+    runtime: process.env.AIO_runtime_namespace,
+  },
+)
 
 const envContent = fs.readFileSync(envPath, 'utf8')
 fs.writeFileSync(envPath, envContent.replace(
